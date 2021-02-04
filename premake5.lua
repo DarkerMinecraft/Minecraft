@@ -41,7 +41,7 @@ project "Minecraft"
 	{
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.GLFW}"
 	}
 
 	filter "system:windows"
