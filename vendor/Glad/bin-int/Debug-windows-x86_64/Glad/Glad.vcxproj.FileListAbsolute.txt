@@ -1,0 +1,2 @@
+C:\Users\Ben\source\repos\Game Engine\vendor\Glad\bin\Debug-windows-x86_64\Glad\Glad.pdb
+C:\Users\Ben\source\repos\Game Engine\vendor\Glad\bin-int\Debug-windows-x86_64\Glad\Glad.pdb
