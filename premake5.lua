@@ -33,15 +33,23 @@ project "Minecraft"
 
 	files 
 	{
-		"%{prj.name}/Source/**.h",
-		"%{prj.name}/Source/**.cpp"
+		"%{prj.name}/Core/**.h",
+		"%{prj.name}/Core/**.cpp"
 	}
 
 	includedirs 
 	{
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}", 
+		"%{prj.name}/Core"
+	}
+
+	links 
+	{
+		"GLFW",
+		"Glad",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"

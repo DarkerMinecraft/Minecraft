@@ -35,3 +35,7 @@
 .vs/
 bin/
 bin-int/
+vendor/GLFW/bin/
+vendor/GLFW/bin-int/
+vendor/Glad/bin/
+vendor/Glad/bin-int/
