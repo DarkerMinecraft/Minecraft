@@ -1,19 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Graphics">
-      <UniqueIdentifier>{1653CE33-0220-293F-2B39-17E717655ECD}</UniqueIdentifier>
+    <Filter Include="graphics">
+      <UniqueIdentifier>{36EF08BC-22BC-63C7-4BD5-516F37019955}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="opengl">
+      <UniqueIdentifier>{EA9EEF12-D640-1AE9-BFFB-2D3DAB3CA139}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{0F45D591-7B24-542D-843C-DF03F09ABA8E}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Core\Graphics\DisplayManager.h">
-      <Filter>Graphics</Filter>
+    <ClInclude Include="Core\graphics\DisplayManager.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\opengl\Vao.h">
+      <Filter>opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\opengl\Vbo.h">
+      <Filter>opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\shaders\ShaderProgram.h">
+      <Filter>shaders</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Core\Graphics\DisplayManager.cpp">
-      <Filter>Graphics</Filter>
-    </ClCompile>
     <ClCompile Include="Core\Minecraft.cpp" />
+    <ClCompile Include="Core\graphics\DisplayManager.cpp">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\opengl\Vao.cpp">
+      <Filter>opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\opengl\Vbo.cpp">
+      <Filter>opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\shaders\ShaderProgram.cpp">
+      <Filter>shaders</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Core\shaders\fragmentShader.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="Core\shaders\vertexShader.glsl">
+      <Filter>shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>

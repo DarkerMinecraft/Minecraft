@@ -78,7 +78,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>EN_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLFW_INCLUDE_NONE;EN_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\vendor\glm;..\vendor\Glad\include;..\vendor\GLFW\include;Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
@@ -95,7 +95,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>EN_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLFW_INCLUDE_NONE;EN_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\vendor\glm;..\vendor\Glad\include;..\vendor\GLFW\include;Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -116,7 +116,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>EN_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLFW_INCLUDE_NONE;EN_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\vendor\glm;..\vendor\Glad\include;..\vendor\GLFW\include;Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -134,11 +134,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Core\Graphics\DisplayManager.h" />
+    <ClInclude Include="Core\graphics\DisplayManager.h" />
+    <ClInclude Include="Core\opengl\Vao.h" />
+    <ClInclude Include="Core\opengl\Vbo.h" />
+    <ClInclude Include="Core\shaders\ShaderProgram.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Core\Graphics\DisplayManager.cpp" />
     <ClCompile Include="Core\Minecraft.cpp" />
+    <ClCompile Include="Core\graphics\DisplayManager.cpp" />
+    <ClCompile Include="Core\opengl\Vao.cpp" />
+    <ClCompile Include="Core\opengl\Vbo.cpp" />
+    <ClCompile Include="Core\shaders\ShaderProgram.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Core\shaders\fragmentShader.glsl" />
+    <None Include="Core\shaders\vertexShader.glsl" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\vendor\GLFW\GLFW.vcxproj">

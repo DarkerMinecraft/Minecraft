@@ -1,4 +1,5 @@
 #include "DisplayManager.h"
+#include <glad/glad.h>
 
 void DisplayManager::DisplayCreate()
 {
@@ -13,6 +14,8 @@ void DisplayManager::DisplayCreate()
 	glfwMakeContextCurrent(m_Window);
 
 	glfwSwapInterval(1);
+
+	gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 
 	glfwShowWindow(m_Window);
 }

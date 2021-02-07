@@ -34,7 +34,8 @@ project "Minecraft"
 	files 
 	{
 		"%{prj.name}/Core/**.h",
-		"%{prj.name}/Core/**.cpp"
+		"%{prj.name}/Core/**.cpp",
+		"%{prj.name}/Core/**.glsl"
 	}
 
 	includedirs 
@@ -50,6 +51,11 @@ project "Minecraft"
 		"GLFW",
 		"Glad",
 		"opengl32.lib"
+	}
+
+	defines 
+	{
+		"GLFW_INCLUDE_NONE"
 	}
 
 	filter "system:windows"
