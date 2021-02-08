@@ -138,6 +138,7 @@
     <ClInclude Include="Core\opengl\Vao.h" />
     <ClInclude Include="Core\opengl\Vbo.h" />
     <ClInclude Include="Core\shaders\ShaderProgram.h" />
+    <ClInclude Include="Core\shaders\entities\EntityShader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Minecraft.cpp" />
@@ -145,10 +146,11 @@
     <ClCompile Include="Core\opengl\Vao.cpp" />
     <ClCompile Include="Core\opengl\Vbo.cpp" />
     <ClCompile Include="Core\shaders\ShaderProgram.cpp" />
+    <ClCompile Include="Core\shaders\entities\EntityShader.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Core\shaders\fragmentShader.glsl" />
-    <None Include="Core\shaders\vertexShader.glsl" />
+    <None Include="Core\shaders\entities\fragmentShader.glsl" />
+    <None Include="Core\shaders\entities\vertexShader.glsl" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\vendor\GLFW\GLFW.vcxproj">

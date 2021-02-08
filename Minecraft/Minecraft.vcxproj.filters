@@ -24,6 +24,7 @@
     <ClInclude Include="Core\shaders\ShaderProgram.h">
       <Filter>shaders</Filter>
     </ClInclude>
+    <ClInclude Include="Core\shaders\entities\EntityShader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Minecraft.cpp" />
@@ -39,12 +40,13 @@
     <ClCompile Include="Core\shaders\ShaderProgram.cpp">
       <Filter>shaders</Filter>
     </ClCompile>
+    <ClCompile Include="Core\shaders\entities\EntityShader.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Core\shaders\fragmentShader.glsl">
+    <None Include="Core\shaders\entities\vertexShader.glsl">
       <Filter>shaders</Filter>
     </None>
-    <None Include="Core\shaders\vertexShader.glsl">
+    <None Include="Core\shaders\entities\fragmentShader.glsl">
       <Filter>shaders</Filter>
     </None>
   </ItemGroup>

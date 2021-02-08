@@ -1,7 +1,7 @@
 #include <glad/glad.h>
 #include "Graphics/DisplayManager.h"
 #include "opengl/Vao.h"
-#include "shaders/ShaderProgram.h"
+#include "shaders/entities/EntityShader.h"
 #include "glad/glad.h"
 
 int main() {
@@ -21,7 +21,7 @@ int main() {
 	vao->StoreDataInAttributeList(positions, 0, 2);
 	vao->UnBindVao(-1);
 
-	ShaderProgram* shader = new ShaderProgram("Core/shaders/vertexShader.glsl", "Core/shaders/fragmentShader.glsl");
+	EntityShader* shader = new EntityShader();
 
 	while (display->DisplayRunning())
 	{

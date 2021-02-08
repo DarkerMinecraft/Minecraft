@@ -9,7 +9,7 @@ void DisplayManager::DisplayCreate()
 	glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
 	glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
 
-	m_Window = glfwCreateWindow(1280, 720, "Hello World!", NULL, NULL);
+	m_Window = glfwCreateWindow(1280, 720, "Minecraft Clone", NULL, NULL);
 
 	glfwMakeContextCurrent(m_Window);
 
