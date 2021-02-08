@@ -18,7 +18,7 @@ int main() {
 
 	Vao* vao = new Vao();
 	vao->BindVao(-1);
-	vao->StoreDataInAttributeList(positions, 0, 3);
+	vao->StoreDataInAttributeList(positions, 0, 2);
 	vao->UnBindVao(-1);
 
 	ShaderProgram* shader = new ShaderProgram("Core/shaders/vertexShader.glsl", "Core/shaders/fragmentShader.glsl");
@@ -28,6 +28,12 @@ int main() {
 		glClear(GL_COLOR_BUFFER_BIT);
 		glClearColor(0.3f, 0.3f, 0.3f, 0.3f);
 		
+		vao->BindVao(0);
+		shader->Start();
+		glDrawArrays(GL_TRIANGLES, 0, sizeof(positions));
+		shader->Stop();
+		vao->UnBindVao(0);
+
 		display->DisplayUpdate();
 	}
 	display->DisplayDestroy();
