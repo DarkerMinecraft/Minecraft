@@ -31,6 +31,13 @@ void Vao::StoreDataInAttributeList(float data[], int index, int size)
 	vbo->UnBindVbo();
 }
 
+void Vao::BindIndicesBuffer(int data[])
+{
+	Vbo* vbo = new Vbo(GL_ELEMENT_ARRAY_BUFFER);
+	vbo->BindVbo();
+	vbo->StoreDataInVbo(data);
+}
+
 void Vao::UnBindVao(int attrib)
 {
 	if (attrib != -1)

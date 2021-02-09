@@ -1,8 +1,8 @@
 #include <glad/glad.h>
-#include "Graphics/DisplayManager.h"
+#include "graphics/DisplayManager.h"
 #include "opengl/Vao.h"
 #include "shaders/entities/EntityShader.h"
-#include "glad/glad.h"
+#include "graphics/Loader.h"
 
 int main() {
 	DisplayManager* display = new DisplayManager();
@@ -12,14 +12,18 @@ int main() {
 	float positions[] = 
 	{
 		-0.5f, -0.5f,
-		0.0f, 0.5f,
-		0.5f, -0.5f
+		0.5f, -0.5f,
+		0.5f, 0.5f, 
+		-0.5f, 0.5f
 	};
 
-	Vao* vao = new Vao();
-	vao->BindVao(-1);
-	vao->StoreDataInAttributeList(positions, 0, 2);
-	vao->UnBindVao(-1);
+	int indices[] = 
+	{
+		0, 1, 2, 
+		2, 3, 0
+	};
+
+	RawModel* model = Loader::LoadToVao(positions, indices);
 
 	EntityShader* shader = new EntityShader();
 
@@ -28,9 +32,11 @@ int main() {
 		glClear(GL_COLOR_BUFFER_BIT);
 		glClearColor(0.3f, 0.3f, 0.3f, 0.3f);
 		
+		Vao* vao = model->GetVao();
+
 		vao->BindVao(0);
 		shader->Start();
-		glDrawArrays(GL_TRIANGLES, 0, sizeof(positions));
+		glDrawArrays(GL_TRIANGLES, 0, model->GetModelCount());
 		shader->Stop();
 		vao->UnBindVao(0);
 

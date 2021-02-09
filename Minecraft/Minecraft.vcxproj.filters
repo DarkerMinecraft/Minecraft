@@ -25,6 +25,9 @@
       <Filter>shaders</Filter>
     </ClInclude>
     <ClInclude Include="Core\shaders\entities\EntityShader.h" />
+    <ClInclude Include="Core\graphics\MasterRenderer.h" />
+    <ClInclude Include="Core\graphics\Loader.h" />
+    <ClInclude Include="Core\graphics\models\RawModel.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Minecraft.cpp" />
@@ -41,6 +44,8 @@
       <Filter>shaders</Filter>
     </ClCompile>
     <ClCompile Include="Core\shaders\entities\EntityShader.cpp" />
+    <ClCompile Include="Core\graphics\MasterRenderer.cpp" />
+    <ClCompile Include="Core\graphics\Loader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Core\shaders\entities\vertexShader.glsl">
