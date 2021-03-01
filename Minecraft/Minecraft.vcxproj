@@ -134,24 +134,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Core\blocks\Block.h" />
     <ClInclude Include="Core\graphics\DisplayManager.h" />
     <ClInclude Include="Core\opengl\Vao.h" />
     <ClInclude Include="Core\opengl\Vbo.h" />
     <ClInclude Include="Core\shaders\ShaderProgram.h" />
     <ClInclude Include="Core\shaders\entities\EntityShader.h" />
-    <ClInclude Include="Core\graphics\MasterRenderer.h" />
+    <ClInclude Include="Core\graphics\renderer\MasterRenderer.h" />
     <ClInclude Include="Core\graphics\Loader.h" />
     <ClInclude Include="Core\graphics\models\RawModel.h" />
+    <ClInclude Include="Core\graphics\renderer\EntityRenderer.h" />
+    <ClInclude Include="Core\opengl\Vertex.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Core\blocks\Block.cpp" />
     <ClCompile Include="Core\Minecraft.cpp" />
     <ClCompile Include="Core\graphics\DisplayManager.cpp" />
     <ClCompile Include="Core\opengl\Vao.cpp" />
     <ClCompile Include="Core\opengl\Vbo.cpp" />
     <ClCompile Include="Core\shaders\ShaderProgram.cpp" />
     <ClCompile Include="Core\shaders\entities\EntityShader.cpp" />
-    <ClCompile Include="Core\graphics\MasterRenderer.cpp" />
+    <ClCompile Include="Core\graphics\renderer\MasterRenderer.cpp" />
     <ClCompile Include="Core\graphics\Loader.cpp" />
+    <ClCompile Include="Core\graphics\renderer\EntityRenderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Core\shaders\entities\fragmentShader.glsl" />
